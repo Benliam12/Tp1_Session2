@@ -115,7 +115,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ailier.cpp" />
+    <ClCompile Include="Avant.cpp" />
+    <ClCompile Include="Centre.cpp" />
+    <ClCompile Include="Defenseur.cpp" />
+    <ClCompile Include="Fiche.cpp" />
+    <ClCompile Include="Gardient.cpp" />
+    <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ailier.h" />
+    <ClInclude Include="Avant.h" />
+    <ClInclude Include="Centre.h" />
+    <ClInclude Include="Defenseur.h" />
+    <ClInclude Include="Fiche.h" />
+    <ClInclude Include="Gardient.h" />
+    <ClInclude Include="Joueur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
