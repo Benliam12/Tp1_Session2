@@ -21,9 +21,6 @@
     <ClCompile Include="Joueur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gardient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Defenseur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,30 +36,30 @@
     <ClCompile Include="Fiche.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Gardien.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Joueur.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Gardient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Defenseur.h">
+    <ClInclude Include="Ailier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Avant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ailier.h">
+    <ClInclude Include="Centre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Centre.h">
+    <ClInclude Include="Defenseur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Fiche.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="Gardien.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

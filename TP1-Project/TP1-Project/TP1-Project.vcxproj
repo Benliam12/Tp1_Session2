@@ -120,7 +120,7 @@
     <ClCompile Include="Centre.cpp" />
     <ClCompile Include="Defenseur.cpp" />
     <ClCompile Include="Fiche.cpp" />
-    <ClCompile Include="Gardient.cpp" />
+    <ClCompile Include="Gardien.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -130,9 +130,8 @@
     <ClInclude Include="Centre.h" />
     <ClInclude Include="Defenseur.h" />
     <ClInclude Include="Fiche.h" />
-    <ClInclude Include="Gardient.h" />
+    <ClInclude Include="Gardien.h" />
     <ClInclude Include="Joueur.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
