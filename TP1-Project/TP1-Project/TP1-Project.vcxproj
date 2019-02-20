@@ -132,6 +132,7 @@
     <ClInclude Include="Fiche.h" />
     <ClInclude Include="Gardient.h" />
     <ClInclude Include="Joueur.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
