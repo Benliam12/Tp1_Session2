@@ -1,3 +1,11 @@
+/*==================================================================================================
+ * Auteur: William D'Anjou
+ * Laboratoire : TP1
+ * Fichier: Fiche.cpp
+ * But: La classe Fiche sert a contenir les informations sur un score qui sera attribue a un joueur
+ * Date: 26 fevrier 2019
+*===================================================================================================*/
+
 #pragma once
 #include <ostream>
 
