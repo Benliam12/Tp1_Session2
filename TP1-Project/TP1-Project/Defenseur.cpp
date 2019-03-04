@@ -9,34 +9,6 @@
 #include "Defenseur.h"
 
 // #####################################################
-// ############ Getters de la classe ###################
-// #####################################################
-
-/**
- * Retourne le pointeur de la fiche
- * 
- * @return Pointeur vers la fiche
- */
-Fiche* Defenseur::getFiche()
-{
-	return this->fiche;
-}
-
-// #####################################################
-// ############ Setters de la classe ###################
-// #####################################################
-
-/**
- * Defini le pointeur vers la fiche du joueur
- * 
- * @param fiche Pointeur vers la fiche a associer
- */
-void Defenseur::setFiche(Fiche* fiche)
-{
-	this->fiche = fiche;
-}
-
-// #####################################################
 // ######## Methodes sans retour de la classe ##########
 // #####################################################
 
@@ -48,7 +20,13 @@ void Defenseur::setFiche(Fiche* fiche)
 void Defenseur::show(std::ostream& flux)
 {
 	flux << "\nJe suis un defenseur";
+
+	if(this->fiche != nullptr)
+	{
+		this->fiche->show(flux);
+	}
 }
+
 
 // #####################################################
 // ######### Constructeur de la classe #################
@@ -59,33 +37,59 @@ void Defenseur::show(std::ostream& flux)
  */
 Defenseur::Defenseur() : Joueur()
 {
-
+	this->setFiche();
 }
 
-Defenseur::Defenseur(Defenseur& defenseur)
+/*
+ * Constructeur a l'aide d'information d'un autre defenseur
+ * 
+ * @param defenseur Reference vers l'objet defenseur a qui on doit prendre les informations
+ */
+Defenseur::Defenseur(Defenseur& defenseur) : Joueur(defenseur.getName(), defenseur.getFirstName(), defenseur.getNumero())
 {
-	this->nom = defenseur.getName();
-	this->prenom = defenseur.getFirstName();
-	this->numero = defenseur.getNumero();
-	this->fiche = defenseur.getFiche();
+	this->setFiche(*defenseur.getFiche());
 }
 
-Defenseur::Defenseur(string nom, string prenom, int numero)
+/**
+ * Constructeur a l'aide du nom, prenom et numero d'un joueur. Genere une fiche vide qui s'ajoute au defenseur
+ * 
+ * @param nom Nom du defenseur
+ * @param prenom Prenom du defenseur
+ * @param numero Numero du defenseur
+ */
+Defenseur::Defenseur(string nom, string prenom, int numero) : Joueur(nom, prenom, numero)
 {
-	
+	this->setFiche();
 }
 
-Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche)
+/**
+ * Constructeur a l'aide du nom, prenom, numero et fiche d'un joueur.
+ *
+ * @param nom Nom du defenseur
+ * @param prenom Prenom du defenseur
+ * @param numero Numero du defenseur
+ * @param fiche Objet fiche qui contient la fiche du joueur
+ */
+Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche) : Joueur(nom, prenom, numero)
 {
-	
+	this->setFiche(fiche);
 }
 
-Defenseur::Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes)
+/**
+ * Constructeur a l'aide du nom, prenom, numero et des informations d'une fiche.
+ *
+ * @param nom Nom du defenseur
+ * @param prenom Prenom du defenseur
+ * @param numero Numero du defenseur
+ * @param PJ PJ de la fiche du joueur
+ * @param buts Nombre de buts de la fiche du joueur
+ * @param passes Nombre de passes de la fiche du joueur
+ */
+Defenseur::Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes) : Joueur(nom, prenom, numero)
 {
-	
+	Fiche f(PJ, buts, passes);
+	this->setFiche(f);
 }
-
-
 
 // #####################################################
 // ########## Destructeur de la classe #################
@@ -93,4 +97,5 @@ Defenseur::Defenseur(string nom, string prenom, int numero, int PJ, int buts, in
 
 Defenseur::~Defenseur()
 {
+	this->deleteFiche();
 }

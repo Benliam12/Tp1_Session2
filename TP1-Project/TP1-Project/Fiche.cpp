@@ -6,7 +6,6 @@
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
-//Inclusion des dependances
 #include <iostream>
 #include "Fiche.h"
 
@@ -88,8 +87,22 @@ void Fiche::setPJ(int PJ)
 }
 
 // #####################################################
-// ######## Method sans retour de la classe ############
+// ####### Methodes sans retour de la classe ###########
 // #####################################################
+
+/**
+ * Compare 2 fiche en semble
+ * 
+ * @param fiche Fiche a comparer
+ * @return True/False si les fiches sont identiques
+ */
+bool Fiche::equals(Fiche const& fiche) const
+{
+	return (fiche.getPJ() == this->PJ &&
+		fiche.getNbButs() == this->buts &&
+		fiche.getNbPasse() == this->passes);
+}
+
 
 /**
  * Affiche l'objet fiche suivant un certain format d'affichage.
@@ -146,9 +159,6 @@ Fiche::Fiche()
 // ############ Destructeurs de la classe ##############
 // #####################################################
 
-/**
- * Destructeur de la classe Fiche.
- */
 Fiche::~Fiche()
 {
 	std::cout << "Destruction d'une fiche!" << std::endl;

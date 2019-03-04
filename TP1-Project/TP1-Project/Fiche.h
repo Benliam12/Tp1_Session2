@@ -15,6 +15,7 @@ protected:
 	int PJ;
 	int buts;
 	int passes;
+
 public:
 	void setPJ(int PJ);
 	void setButs(int but);
@@ -24,8 +25,9 @@ public:
 	int getNbButs() const;
 	int getNbPasse() const;
 
-	void show(std::ostream &flux);
+	bool equals(Fiche const &fiche) const;
 
+	void show(std::ostream &flux);
 
 	Fiche(Fiche const &fiche);
 	Fiche(int PJ, int buts, int passes);

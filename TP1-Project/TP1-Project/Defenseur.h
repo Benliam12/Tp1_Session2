@@ -11,15 +11,13 @@
 //Inclusions
 #include "Joueur.h"
 #include "Fiche.h"
+#include "OutOfGoalPlayer.h"
 
-class Defenseur : public Joueur
+class Defenseur : public Joueur, OutOfGoalPlayer
 {
-protected:
-	Fiche* fiche = nullptr;
 public:
 	virtual void show(std::ostream &flux);
-	void setFiche(Fiche* f);
-	Fiche* getFiche();
+
 
 	Defenseur();
 	Defenseur(Defenseur &defenseur);
@@ -28,4 +26,3 @@ public:
 	Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes);
 	virtual ~Defenseur();
 };
-

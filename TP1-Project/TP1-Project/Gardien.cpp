@@ -4,10 +4,11 @@
 
 Gardien::Gardien()
 {
+
 }
 
 
 Gardien::~Gardien()
 {
-}
 
+}

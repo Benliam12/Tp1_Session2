@@ -1,19 +1,14 @@
-/*******************
- *Auteur : William D'Anjou
- *Laboratoire: TP1
- *Fichier: main.cpp
- *But: Generer //TODO: PUT SOMETHING HERE
- *Date: 15 mars 2019
- */
+ /*==================================================================================================
+  * Auteur: William D'Anjou
+  * Laboratoire : TP1
+  * Fichier: main.cpp
+  * But: //TODO: Ajouter un but concret
+  * Date: 19 mars 2019
+ *===================================================================================================*/
 
-//Inclusion des librairies requises
 #include <iostream>
-#include <string>
-
-//Inclusion des fichiers requis
-#include "Fiche.h"
+#include "SurchargeOperator.h"
 #include "Gardien.h"
-#include "Defenseur.h"
 #include "Ailier.h"
 #include "Centre.h"
 
@@ -23,13 +18,7 @@ using namespace std;
  * Fonction de surcharges d'operateurs
  */
 
-ostream & operator <<(ostream &flux, Joueur* joueur)
-{
-	joueur->show(flux);
 
-	flux << joueur->getName();
-	return flux;
-}
 
 /**
  * Fonction principale du programme
@@ -51,24 +40,24 @@ int main()
 	f7 = f3;
 
 	cout << "Présentation des fiches:\n";
-	cout << "Fiche 1: \n" << &f1 << endl;
-	cout << "Fiche 2: \n" << &f2 << endl;
-	cout << "Fiche 3: \n" << &f3 << endl;
-	cout << "Fiche 4: \n" << &f4 << endl;
-	cout << "Fiche 5: \n" << &f5 << endl;
-	cout << "Fiche 6: \n" << &f6 << endl;
-	cout << "Fiche 7: \n" << &f7 << endl;
+	cout << "Fiche 1: \n" << f1 << endl;
+	cout << "Fiche 2: \n" << f2 << endl;
+	cout << "Fiche 3: \n" << f3 << endl;
+	cout << "Fiche 4: \n" << f4 << endl;
+	cout << "Fiche 5: \n" << f5 << endl;
+	cout << "Fiche 6: \n" << f6 << endl;
+	cout << "Fiche 7: \n" << f7 << endl;
 
 	g3 = g2;
 
-	g2.setNom("Gagnon");
-	g3.setNom("Lamothe");
+	g2.setName("Gagnon");
+	g3.setName("Lamothe");
 
 
 	cout << "\nPrésentation des gardiens:\n";
-	cout << "Gardien 1: \n" << &g1 << endl;
-	cout << "Gardien 2: \n" << &g2 << endl;
-	cout << "Gardien 3: \n" << &g3 << endl;
+	cout << "Gardien 1: \n" << g1 << endl;
+	cout << "Gardien 2: \n" << g2 << endl;
+	cout << "Gardien 3: \n" << g3 << endl;
 
 	d4 = d2;
 	d3.setFiche(f6);
@@ -82,11 +71,11 @@ int main()
 
 
 	cout << "\nPrésentation des défenseurs:\n";
-	cout << "Défenseur 1: \n" << &d1 << endl;
-	cout << "Défenseur 2: \n" << &d2 << endl;
-	cout << "Défenseur 3: \n" << &d3 << endl;
-	cout << "Défenseur 4: \n" << &d4 << endl;
-	cout << "Défenseur 5: \n" << &d5 << endl;
+	cout << "Défenseur 1: \n" << d1 << endl;
+	cout << "Défenseur 2: \n" << d2 << endl;
+	cout << "Défenseur 3: \n" << d3 << endl;
+	cout << "Défenseur 4: \n" << d4 << endl;
+	cout << "Défenseur 5: \n" << d5 << endl;
 
 	a6 = a2;
 	a6 += f4;
@@ -95,12 +84,12 @@ int main()
 	a6.setPosition("gauche");
 
 	cout << "\nPrésentation des ailiers:\n";
-	cout << "Ailier 1: \n" << &a1 << endl;
-	cout << "Ailier 2: \n" << &a2 << endl;
-	cout << "Ailier 3: \n" << &a3 << endl;
-	cout << "Ailier 4: \n" << &a4 << endl;
-	cout << "Ailier 5: \n" << &a5 << endl;
-	cout << "Ailier 6: \n" << &a6 << endl;
+	cout << "Ailier 1: \n" << a1 << endl;
+	cout << "Ailier 2: \n" << a2 << endl;
+	cout << "Ailier 3: \n" << a3 << endl;
+	cout << "Ailier 4: \n" << a4 << endl;
+	cout << "Ailier 5: \n" << a5 << endl;
+	cout << "Ailier 6: \n" << a6 << endl;
 
 	c3 = c1;
 	c1 += f1;
@@ -108,9 +97,9 @@ int main()
 	c3 += f3;
 
 	cout << "\nPrésentation des centres:\n";
-	cout << "Centre 1: \n" << &c1 << endl;
-	cout << "Centre 2: \n" << &c2 << endl;
-	cout << "Centre 3: \n" << &c3 << endl;
+	cout << "Centre 1: \n" << c1 << endl;
+	cout << "Centre 2: \n" << c2 << endl;
+	cout << "Centre 3: \n" << c3 << endl;
 
 	if (d1 == d2) cout << "Défenseur 1 == défenseur 2\n";
 	if (d1 == a2) cout << "Défenseur 1 == ailier 2\n";

@@ -7,7 +7,6 @@
 *===================================================================================================*/
 #pragma once
 
-#include <iostream>
 #include <string>
 
 using std::string;
@@ -19,7 +18,7 @@ protected:
 	string nom;
 	string prenom;
 public:
-	virtual void show(std::ostream &flux) const;
+	virtual void show(std::ostream &flux);
 
 	void setName(string name);
 	void setFirstName(string firstName);
