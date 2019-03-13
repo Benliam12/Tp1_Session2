@@ -19,7 +19,6 @@ using namespace std;
  */
 
 
-
 /**
  * Fonction principale du programme
  */
@@ -68,7 +67,6 @@ int main()
 	d5.setFiche(10, 4, 5);
 
 	d3 += f1;
-
 
 	cout << "\nPrésentation des défenseurs:\n";
 	cout << "Défenseur 1: \n" << d1 << endl;

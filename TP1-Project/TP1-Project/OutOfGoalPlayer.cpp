@@ -4,6 +4,7 @@
  * Fichier: OutOfGoalPlayer.h
  * But: Classe abstraite servant a la non répétition des surchages d'opérateur. Sera hérité par Défenseur et Avant
  *      Contiendra également les méthodes communes entre ces 2 classes.
+ *      Addition de cette classe afin de facilite et de rendre plus logique le développement du TP1.
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
@@ -18,7 +19,7 @@
  *
  * @return Pointeur vers la fiche
  */
-Fiche* OutOfGoalPlayer::getFiche()
+Fiche* OutOfGoalPlayer::getFiche() const 
 {
 	return this->fiche;
 }
@@ -43,7 +44,7 @@ void OutOfGoalPlayer::setFiche()
  *
  * @param fiche Objet fiche a associer
  */
-void OutOfGoalPlayer::setFiche(Fiche fiche)
+void OutOfGoalPlayer::setFiche(Fiche& fiche)
 {
 	this->deleteFiche();
 
@@ -71,4 +72,49 @@ void OutOfGoalPlayer::deleteFiche()
 		delete this->fiche;
 		this->fiche = nullptr;
 	}
+}
+
+OutOfGoalPlayer::~OutOfGoalPlayer()
+{
+	
+}
+
+//TODO: ADD COMMENTS
+
+OutOfGoalPlayer::OutOfGoalPlayer() : Joueur() {}
+
+OutOfGoalPlayer::OutOfGoalPlayer(OutOfGoalPlayer const& p)
+{
+	this->setFiche(*p.getFiche());
+	this->nom = p.getName();
+	this->prenom = p.getFirstName();
+	this->numero = p.getNumero();
+}
+
+OutOfGoalPlayer::OutOfGoalPlayer(string nom, string prenom, int numero) : Joueur(nom, prenom, numero){}
+
+bool OutOfGoalPlayer::equals(OutOfGoalPlayer& p2)
+{
+	return(
+		this->nom    == p2.getName()      &&
+		this->prenom == p2.getFirstName() &&
+		this->numero == p2.getNumero()    &&
+		this->fiche  == p2.getFiche()
+		);
+}
+
+OutOfGoalPlayer& OutOfGoalPlayer::operator+=(Fiche& f2)
+{
+	*this->fiche += f2;
+	return *this;
+}
+
+OutOfGoalPlayer& OutOfGoalPlayer::operator=(OutOfGoalPlayer const &d2)
+{
+	this->setFiche(*d2.getFiche());
+	this->setFirstName(d2.getFirstName());
+	this->setName(d2.getName());
+	this->setNumero(d2.getNumero());
+
+	return *this;
 }

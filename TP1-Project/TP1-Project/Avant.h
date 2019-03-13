@@ -1,8 +1,7 @@
 #pragma once
-#include "Joueur.h"
 #include "OutOfGoalPlayer.h"
 
-class Avant : public Joueur, OutOfGoalPlayer
+class Avant : public OutOfGoalPlayer
 {
 public:
 	Avant();

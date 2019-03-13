@@ -13,11 +13,12 @@
 #include "Fiche.h"
 #include "OutOfGoalPlayer.h"
 
-class Defenseur : public Joueur, OutOfGoalPlayer
+class Defenseur : public OutOfGoalPlayer
 {
 public:
 	virtual void show(std::ostream &flux);
 
+	Defenseur & operator=(Defenseur & d2);
 
 	Defenseur();
 	Defenseur(Defenseur &defenseur);

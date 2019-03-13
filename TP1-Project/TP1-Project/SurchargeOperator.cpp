@@ -27,8 +27,8 @@ bool operator ==(Defenseur const &d1, Defenseur const &d2)
 
 }
 
-Joueur operator=(Joueur const& p1, Joueur const& p2)
+bool operator !=(Defenseur const &d1, Defenseur const &d2)
 {
-	Joueur j;
-	return j;
+	return !(d1 == d2);
 }
+

@@ -163,3 +163,22 @@ Fiche::~Fiche()
 {
 	std::cout << "Destruction d'une fiche!" << std::endl;
 }
+
+
+
+Fiche& Fiche::operator+=(Fiche const& f2)
+{
+	this->PJ += f2.getPJ();
+	this->buts += f2.getNbButs();
+	this->passes += f2.getNbPasse();
+
+	return *this;
+}
+
+Fiche& operator+(Fiche& f1, Fiche& f2)
+{
+	//TODO: Make sure this thing is actually LEGIT
+	Fiche cf(f1);
+	return (cf += f2);
+}
+

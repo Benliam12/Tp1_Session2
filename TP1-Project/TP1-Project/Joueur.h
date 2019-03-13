@@ -18,15 +18,17 @@ protected:
 	string nom;
 	string prenom;
 public:
-	virtual void show(std::ostream &flux);
+	virtual void show(std::ostream &flux) const;
 
 	void setName(string name);
 	void setFirstName(string firstName);
 	void setNumero(int numero);
 
-	string getName();
-	string getFirstName();
-	int getNumero();
+	string getName() const;
+	string getFirstName() const;
+	int getNumero() const;
+
+	Joueur & operator=(Joueur & j);
 
 	Joueur();
 	Joueur(string nom, string prenom, int numero);

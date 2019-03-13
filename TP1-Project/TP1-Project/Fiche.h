@@ -29,9 +29,12 @@ public:
 
 	void show(std::ostream &flux);
 
+	Fiche & operator+=(Fiche const &f2);
+
 	Fiche(Fiche const &fiche);
 	Fiche(int PJ, int buts, int passes);
 	Fiche();
 	~Fiche();
 };
 
+Fiche & operator+(Fiche &f1, Fiche &f2);

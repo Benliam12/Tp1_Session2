@@ -35,7 +35,7 @@ void Defenseur::show(std::ostream& flux)
 /**
  * Constructeur nul
  */
-Defenseur::Defenseur() : Joueur()
+Defenseur::Defenseur()
 {
 	this->setFiche();
 }
@@ -45,7 +45,7 @@ Defenseur::Defenseur() : Joueur()
  * 
  * @param defenseur Reference vers l'objet defenseur a qui on doit prendre les informations
  */
-Defenseur::Defenseur(Defenseur& defenseur) : Joueur(defenseur.getName(), defenseur.getFirstName(), defenseur.getNumero())
+Defenseur::Defenseur(Defenseur& defenseur) : OutOfGoalPlayer(defenseur.getName(), defenseur.getFirstName(), defenseur.getNumero())
 {
 	this->setFiche(*defenseur.getFiche());
 }
@@ -57,7 +57,7 @@ Defenseur::Defenseur(Defenseur& defenseur) : Joueur(defenseur.getName(), defense
  * @param prenom Prenom du defenseur
  * @param numero Numero du defenseur
  */
-Defenseur::Defenseur(string nom, string prenom, int numero) : Joueur(nom, prenom, numero)
+Defenseur::Defenseur(string nom, string prenom, int numero) : OutOfGoalPlayer(nom, prenom, numero)
 {
 	this->setFiche();
 }
@@ -70,7 +70,7 @@ Defenseur::Defenseur(string nom, string prenom, int numero) : Joueur(nom, prenom
  * @param numero Numero du defenseur
  * @param fiche Objet fiche qui contient la fiche du joueur
  */
-Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche) : Joueur(nom, prenom, numero)
+Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche) : OutOfGoalPlayer(nom, prenom, numero)
 {
 	this->setFiche(fiche);
 }
@@ -85,7 +85,7 @@ Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche) : Joueu
  * @param buts Nombre de buts de la fiche du joueur
  * @param passes Nombre de passes de la fiche du joueur
  */
-Defenseur::Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes) : Joueur(nom, prenom, numero)
+Defenseur::Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes) : OutOfGoalPlayer(nom, prenom, numero)
 {
 	Fiche f(PJ, buts, passes);
 	this->setFiche(f);
@@ -99,3 +99,12 @@ Defenseur::~Defenseur()
 {
 	this->deleteFiche();
 }
+
+Defenseur& Defenseur::operator=(Defenseur& d2)
+{
+	//TODO: CHECK IF THIS WILL WORK
+	(OutOfGoalPlayer) *this = (OutOfGoalPlayer)d2;
+	return *this;
+}
+
+

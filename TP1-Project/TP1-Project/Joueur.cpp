@@ -10,17 +10,17 @@
 
 using std::string;
 
-string Joueur::getFirstName()
+string Joueur::getFirstName() const
 {
 	return this->prenom;
 }
 
-string Joueur::getName()
+string Joueur::getName() const
 {
 	return this->nom;
 }
 
-int Joueur::getNumero()
+int Joueur::getNumero() const
 {
 	return this->numero;
 }
@@ -52,11 +52,16 @@ void Joueur::show(std::ostream &flux) const
 
 Joueur::Joueur(string nom, string prenom, int numero)
 {
-	
+	this->nom = nom;
+	this->prenom = prenom;
+	this->numero = numero;
 }
 
 Joueur::Joueur()
 {
+	this->nom = "";
+	this->prenom = "";
+	this->numero = 0;
 }
 
 
