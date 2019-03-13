@@ -38,7 +38,7 @@ int main()
 	f4 += f1;
 	f7 = f3;
 
-	cout << "Présentation des fiches:\n";
+	cout << "Presentation des fiches:\n";
 	cout << "Fiche 1: \n" << f1 << endl;
 	cout << "Fiche 2: \n" << f2 << endl;
 	cout << "Fiche 3: \n" << f3 << endl;
@@ -53,7 +53,7 @@ int main()
 	g3.setName("Lamothe");
 
 
-	cout << "\nPrésentation des gardiens:\n";
+	cout << "\nPresentation des gardiens:\n";
 	cout << "Gardien 1: \n" << g1 << endl;
 	cout << "Gardien 2: \n" << g2 << endl;
 	cout << "Gardien 3: \n" << g3 << endl;
@@ -68,12 +68,12 @@ int main()
 
 	d3 += f1;
 
-	cout << "\nPrésentation des défenseurs:\n";
-	cout << "Défenseur 1: \n" << d1 << endl;
-	cout << "Défenseur 2: \n" << d2 << endl;
-	cout << "Défenseur 3: \n" << d3 << endl;
-	cout << "Défenseur 4: \n" << d4 << endl;
-	cout << "Défenseur 5: \n" << d5 << endl;
+	cout << "\nPresentation des defenseurs:\n";
+	cout << "Defenseur 1: \n" << d1 << endl;
+	cout << "Defenseur 2: \n" << d2 << endl;
+	cout << "Defenseur 3: \n" << d3 << endl;
+	cout << "Defenseur 4: \n" << d4 << endl;
+	cout << "Defenseur 5: \n" << d5 << endl;
 
 	a6 = a2;
 	a6 += f4;
@@ -81,7 +81,7 @@ int main()
 	a3 += f3;
 	a6.setPosition("gauche");
 
-	cout << "\nPrésentation des ailiers:\n";
+	cout << "\nPresentation des ailiers:\n";
 	cout << "Ailier 1: \n" << a1 << endl;
 	cout << "Ailier 2: \n" << a2 << endl;
 	cout << "Ailier 3: \n" << a3 << endl;
@@ -94,20 +94,20 @@ int main()
 	c2 += f2;
 	c3 += f3;
 
-	cout << "\nPrésentation des centres:\n";
+	cout << "\nPresentation des centres:\n";
 	cout << "Centre 1: \n" << c1 << endl;
 	cout << "Centre 2: \n" << c2 << endl;
 	cout << "Centre 3: \n" << c3 << endl;
 
-	if (d1 == d2) cout << "Défenseur 1 == défenseur 2\n";
-	if (d1 == a2) cout << "Défenseur 1 == ailier 2\n";
-	if (d1 == c1) cout << "Défenseur 1 == centre 1\n";
+	if (d1 == d2) cout << "Defenseur 1 == defenseur 2\n";
+	if (d1 == a2) cout << "Defenseur 1 == ailier 2\n";
+	if (d1 == c1) cout << "Defenseur 1 == centre 1\n";
 	if (a2 == d1) cout << "Ailier 2 == defenseur 1\n";
 	if (c1 == a2) cout << "Centre 1 == ailier 2\n";
 
-	if (d1 != d2) cout << "Défenseur 1 != défenseur 2\n";
-	if (d1 != a2) cout << "Défenseur 1 != ailier 2\n";
-	if (d1 != c1) cout << "Défenseur 1 != centre 1\n";
+	if (d1 != d2) cout << "Defenseur 1 != defenseur 2\n";
+	if (d1 != a2) cout << "Defenseur 1 != ailier 2\n";
+	if (d1 != c1) cout << "Defenseur 1 != centre 1\n";
 	if (a2 != d1) cout << "Ailier 2 != defenseur 1\n";
 	if (c1 != a2) cout << "Centre 1 != ailier 2\n";
 
