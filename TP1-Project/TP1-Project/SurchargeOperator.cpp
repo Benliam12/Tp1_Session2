@@ -8,11 +8,14 @@
 
 #include "SurchargeOperator.h"
 
+void afficherJoueur(ostream &flux, Joueur &j)
+{
+	j.show(flux);
+}
+
 ostream & operator <<(ostream &flux, Joueur &joueur)
 {
-	joueur.show(flux);
-
-	flux << joueur.getName();
+	afficherJoueur(flux, joueur);
 	return flux;
 }
 
@@ -22,13 +25,32 @@ ostream & operator <<(ostream &flux, Fiche &fiche)
 	return flux;
 }
 
-bool operator ==(Defenseur const &d1, Defenseur const &d2)
+bool operator==(OutOfGoalPlayer const& p1, OutOfGoalPlayer const& p2)
 {
-
+	return p1.equals(p2);
 }
 
-bool operator !=(Defenseur const &d1, Defenseur const &d2)
+
+bool operator!=(OutOfGoalPlayer const& p1, OutOfGoalPlayer const& p2)
 {
-	return !(d1 == d2);
+	return !(p1 == p2);
 }
+
+bool operator==(Fiche const& f1, Fiche const& f2)
+{
+	return f1.equals(f2);
+}
+
+
+
+
+//bool operator ==(Defenseur const &d1, Defenseur const &d2)
+//{
+//
+//}
+//
+//bool operator !=(Defenseur const &d1, Defenseur const &d2)
+//{
+//	return !(d1 == d2);
+//}
 

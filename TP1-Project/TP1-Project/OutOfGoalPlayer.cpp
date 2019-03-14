@@ -8,7 +8,9 @@
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
+#include <iostream>
 #include "OutOfGoalPlayer.h"
+#include "SurchargeOperator.h"
 
 // #####################################################
 // ############ Getters de la classe ###################
@@ -44,7 +46,7 @@ void OutOfGoalPlayer::setFiche()
  *
  * @param fiche Objet fiche a associer
  */
-void OutOfGoalPlayer::setFiche(Fiche& fiche)
+void OutOfGoalPlayer::setFiche(Fiche const &fiche)
 {
 	this->deleteFiche();
 
@@ -81,7 +83,10 @@ OutOfGoalPlayer::~OutOfGoalPlayer()
 
 //TODO: ADD COMMENTS
 
-OutOfGoalPlayer::OutOfGoalPlayer() : Joueur() {}
+OutOfGoalPlayer::OutOfGoalPlayer() : Joueur()
+{
+	this->setFiche();
+}
 
 OutOfGoalPlayer::OutOfGoalPlayer(OutOfGoalPlayer const& p)
 {
@@ -91,19 +96,17 @@ OutOfGoalPlayer::OutOfGoalPlayer(OutOfGoalPlayer const& p)
 	this->numero = p.getNumero();
 }
 
-OutOfGoalPlayer::OutOfGoalPlayer(string nom, string prenom, int numero) : Joueur(nom, prenom, numero){}
-
-bool OutOfGoalPlayer::equals(OutOfGoalPlayer& p2)
+OutOfGoalPlayer::OutOfGoalPlayer(string nom, string prenom, int numero) : Joueur(nom, prenom, numero)
 {
-	return(
-		this->nom    == p2.getName()      &&
-		this->prenom == p2.getFirstName() &&
-		this->numero == p2.getNumero()    &&
-		this->fiche  == p2.getFiche()
-		);
+	this->setFiche();
 }
 
-OutOfGoalPlayer& OutOfGoalPlayer::operator+=(Fiche& f2)
+bool OutOfGoalPlayer::equals(OutOfGoalPlayer const &p2) const
+{
+	return *this->fiche == *p2.getFiche();
+}
+
+OutOfGoalPlayer& OutOfGoalPlayer::operator+=(Fiche &f2)
 {
 	*this->fiche += f2;
 	return *this;
@@ -111,10 +114,20 @@ OutOfGoalPlayer& OutOfGoalPlayer::operator+=(Fiche& f2)
 
 OutOfGoalPlayer& OutOfGoalPlayer::operator=(OutOfGoalPlayer const &d2)
 {
+	this->copy(d2);
+	return *this;
+}
+
+void OutOfGoalPlayer::copy(OutOfGoalPlayer const& d2)
+{
 	this->setFiche(*d2.getFiche());
 	this->setFirstName(d2.getFirstName());
 	this->setName(d2.getName());
 	this->setNumero(d2.getNumero());
+}
 
-	return *this;
+
+void OutOfGoalPlayer::show(std::ostream& flux) const
+{
+	Joueur::show(flux);
 }

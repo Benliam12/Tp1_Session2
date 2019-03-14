@@ -18,11 +18,13 @@ protected:
 	Fiche* fiche = nullptr;
 	void deleteFiche();
 public:
-	void setFiche(Fiche &f);
+	void setFiche(Fiche const &f);
 	void setFiche(int PJ, int buts, int passes);
 	void setFiche();
+	void copy(OutOfGoalPlayer const &p2);
+	virtual void show(std::ostream &flux) const;
 
-	bool equals(OutOfGoalPlayer &p2);
+	bool equals(OutOfGoalPlayer const &p2) const;
 
 	OutOfGoalPlayer & operator=(OutOfGoalPlayer const &p1);
 	OutOfGoalPlayer & operator+=(Fiche &f2);

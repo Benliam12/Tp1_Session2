@@ -17,9 +17,10 @@
  *
  * @param flux Le flux qui sera affiche
  */
-void Defenseur::show(std::ostream& flux)
+void Defenseur::show(std::ostream& flux) const
 {
-	flux << "\nJe suis un defenseur";
+	OutOfGoalPlayer::show(flux);
+	flux << "\n Je suis un defenseur";
 
 	if(this->fiche != nullptr)
 	{
@@ -103,7 +104,7 @@ Defenseur::~Defenseur()
 Defenseur& Defenseur::operator=(Defenseur& d2)
 {
 	//TODO: CHECK IF THIS WILL WORK
-	(OutOfGoalPlayer) *this = (OutOfGoalPlayer)d2;
+	this->copy(d2);
 	return *this;
 }
 

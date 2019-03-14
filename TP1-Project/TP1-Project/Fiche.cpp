@@ -6,7 +6,6 @@
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
-#include <iostream>
 #include "Fiche.h"
 
 // #####################################################
@@ -30,7 +29,7 @@ int Fiche::getNbButs() const
  */
 int Fiche::getNbPasse() const
 {
-	this->passes;
+	return this->passes;
 }
 
 /**
@@ -98,6 +97,13 @@ void Fiche::setPJ(int PJ)
  */
 bool Fiche::equals(Fiche const& fiche) const
 {
+	/*if(fiche.PJ != fiche.getPJ())
+		std::cout << "--- PJ --- " << this->PJ << " | " << fiche.getPJ();
+	if (fiche.buts != fiche.getNbButs())
+		std::cout << "--- BUT --- " << this->buts << " | " << fiche.getNbButs();
+	if (fiche.passes != fiche.getNbPasse())
+		std::cout << "--- PASSE --- " << this->passes << " | " << fiche.getNbPasse();*/
+
 	return (fiche.getPJ() == this->PJ &&
 		fiche.getNbButs() == this->buts &&
 		fiche.getNbPasse() == this->passes);
@@ -111,7 +117,7 @@ bool Fiche::equals(Fiche const& fiche) const
  */
 void Fiche::show(std::ostream& flux)
 {
-	flux << std::endl << " PJ " << " B " << " P " << std::endl; // En-tete
+	flux << " PJ " << " B " << " P " << std::endl; // En-tete
 	flux << " " << this->PJ << " " << this->buts << " " << this->passes; // Score
 }
 
@@ -161,7 +167,7 @@ Fiche::Fiche()
 
 Fiche::~Fiche()
 {
-	std::cout << "Destruction d'une fiche!" << std::endl;
+	//std::cout << "Destruction d'une fiche!" << std::endl;
 }
 
 
@@ -175,10 +181,10 @@ Fiche& Fiche::operator+=(Fiche const& f2)
 	return *this;
 }
 
-Fiche& operator+(Fiche& f1, Fiche& f2)
+Fiche operator+(Fiche const &f1, Fiche const &f2)
 {
-	//TODO: Make sure this thing is actually LEGIT
 	Fiche cf(f1);
-	return (cf += f2);
+	cf += f2;
+	return cf;
 }
 

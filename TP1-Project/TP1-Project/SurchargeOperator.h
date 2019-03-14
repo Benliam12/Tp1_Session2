@@ -16,4 +16,5 @@ using std::ostream;
 ostream & operator <<(ostream &flux, Joueur&joueur);
 ostream & operator <<(ostream &flux, Fiche& fiche);
 bool operator ==(OutOfGoalPlayer const &p1, OutOfGoalPlayer const &p2);
+bool operator ==(Fiche const& f1, Fiche const& f2);
 bool operator !=(OutOfGoalPlayer const &p1, OutOfGoalPlayer const &p2);

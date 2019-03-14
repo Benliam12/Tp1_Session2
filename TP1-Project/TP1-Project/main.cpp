@@ -15,11 +15,6 @@
 using namespace std;
 
 /**
- * Fonction de surcharges d'operateurs
- */
-
-
-/**
  * Fonction principale du programme
  */
 int main()
@@ -31,7 +26,7 @@ int main()
 	Defenseur d2("McDonagh", "Ryan", 27, 56, 2, 30);
 	Defenseur d3(d2), d4("Weber", "Shea", 6), d5;
 	Ailier a1("Sharp", "Patrick", 10, "gauche");
-	Ailier a2("Kane", "Patrick", 88, "droite", f1), a3(a1), a4(a1, f2), a5(a2, 10, 5, 10), a6;
+	Ailier a2("Kane", "Patrick", 88, "droite", f1),a3(a1), a4(a1, f2), a5(a2, 10, 5, 10), a6;
 	Centre c1("Crosby", "Sidney", 87), c2(c1), c3;
 
 	f6 = f1 + f2;

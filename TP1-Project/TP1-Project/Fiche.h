@@ -37,4 +37,4 @@ public:
 	~Fiche();
 };
 
-Fiche & operator+(Fiche &f1, Fiche &f2);
+Fiche operator+(Fiche const &f1, Fiche const &f2);

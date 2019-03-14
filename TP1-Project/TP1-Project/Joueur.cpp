@@ -47,7 +47,7 @@ void Joueur::setNumero(int numero)
  */
 void Joueur::show(std::ostream &flux) const
 {
-	flux << "Je suis " << this->prenom << " " << this->nom << ". Mon numero est " << this->numero;
+	flux << " Je suis " << this->prenom << " " << this->nom << ". Mon numero est " << this->numero;
 }
 
 Joueur::Joueur(string nom, string prenom, int numero)

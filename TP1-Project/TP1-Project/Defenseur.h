@@ -9,14 +9,13 @@
 #pragma once
 
 //Inclusions
-#include "Joueur.h"
 #include "Fiche.h"
 #include "OutOfGoalPlayer.h"
 
 class Defenseur : public OutOfGoalPlayer
 {
 public:
-	virtual void show(std::ostream &flux);
+	virtual void show(std::ostream &flux) const;
 
 	Defenseur & operator=(Defenseur & d2);
 
