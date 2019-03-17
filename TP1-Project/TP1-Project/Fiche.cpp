@@ -97,13 +97,6 @@ void Fiche::setPJ(int PJ)
  */
 bool Fiche::equals(Fiche const& fiche) const
 {
-	/*if(fiche.PJ != fiche.getPJ())
-		std::cout << "--- PJ --- " << this->PJ << " | " << fiche.getPJ();
-	if (fiche.buts != fiche.getNbButs())
-		std::cout << "--- BUT --- " << this->buts << " | " << fiche.getNbButs();
-	if (fiche.passes != fiche.getNbPasse())
-		std::cout << "--- PASSE --- " << this->passes << " | " << fiche.getNbPasse();*/
-
 	return (fiche.getPJ() == this->PJ &&
 		fiche.getNbButs() == this->buts &&
 		fiche.getNbPasse() == this->passes);

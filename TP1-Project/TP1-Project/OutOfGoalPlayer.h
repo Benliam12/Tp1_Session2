@@ -24,7 +24,6 @@ public:
 	void copy(OutOfGoalPlayer const &p2);
 	virtual void show(std::ostream &flux) const;
 
-	bool equals(OutOfGoalPlayer const &p2) const;
 
 	OutOfGoalPlayer & operator=(OutOfGoalPlayer const &p1);
 	OutOfGoalPlayer & operator+=(Fiche &f2);

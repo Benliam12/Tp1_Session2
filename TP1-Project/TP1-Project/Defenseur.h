@@ -9,20 +9,34 @@
 #pragma once
 
 //Inclusions
+#include "Avant.h"
 #include "Fiche.h"
-#include "OutOfGoalPlayer.h"
 
-class Defenseur : public OutOfGoalPlayer
+class Defenseur : public Joueur
 {
+protected:
+	Fiche* fiche = nullptr;
+	void deleteFiche();
 public:
-	virtual void show(std::ostream &flux) const;
+	bool equals(Fiche const &fiche) const;
 
-	Defenseur & operator=(Defenseur & d2);
+	Defenseur & operator=(Defenseur const &d2);
+	Defenseur & operator+=(Fiche &f2);
 
 	Defenseur();
-	Defenseur(Defenseur &defenseur);
+	Defenseur(Defenseur const &defenseur);
 	Defenseur(string nom, string prenom, int numero);
 	Defenseur(string nom, string prenom, int numero, Fiche fiche);
 	Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes);
 	virtual ~Defenseur();
+
+	Fiche* getFiche() const;
+
+	void copy(Defenseur const &p2);
+	void copy(Avant const &p2);
+	void setFiche();
+	void setFiche(Fiche const &f);
+	void setFiche(int PJ, int buts, int passes);
+	virtual void show(std::ostream &flux) const;
+
 };

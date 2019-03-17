@@ -1,8 +1,14 @@
+/*==================================================================================================
+ * Auteur: William D'Anjou
+ * Laboratoire : TP1
+ * Fichier: Centre.cpp
+ * But: Contient les informations d'un joueur de centre
+ * Date: 26 fevrier 2019
+*===================================================================================================*/
+
 #include "Centre.h"
 
-
-
-Centre::Centre()
+Centre::Centre() : Avant()
 {
 }
 
@@ -13,7 +19,6 @@ Centre::~Centre()
 }
 
 Centre::Centre(Centre const& c) : Avant(c.getName(),c.getFirstName(), c.getNumero()){}
-
 
 Centre::Centre(std::string nom, std::string prenom, int numero) : Avant(nom, prenom, numero)
 {

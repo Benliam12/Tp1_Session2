@@ -2,7 +2,7 @@
 
 
 
-Avant::Avant() : OutOfGoalPlayer()
+Avant::Avant() : Joueur()
 {
 }
 
@@ -11,8 +11,8 @@ Avant::~Avant()
 {
 }
 
-Avant::Avant(std::string nom, std::string prenom, int numero) : OutOfGoalPlayer(nom, prenom, numero)
+Avant::Avant(std::string nom, std::string prenom, int numero) : Joueur(nom, prenom, numero)
 {
-	
+
 }
 
