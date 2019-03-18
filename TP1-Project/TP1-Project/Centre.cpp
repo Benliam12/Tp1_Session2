@@ -34,7 +34,7 @@ void Centre::show(std::ostream &flux) const
 		this->fiche->show(flux);
 	}
 
-	flux << "\n\n Je joue au centre\n";
+	flux << "\n Je joue au centre\n";
 }
 
 Centre& Centre::operator=(Centre const& c)

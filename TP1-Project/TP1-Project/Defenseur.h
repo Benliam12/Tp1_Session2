@@ -33,7 +33,6 @@ public:
 	Fiche* getFiche() const;
 
 	void copy(Defenseur const &p2);
-	void copy(Avant const &p2);
 	void setFiche();
 	void setFiche(Fiche const &f);
 	void setFiche(int PJ, int buts, int passes);

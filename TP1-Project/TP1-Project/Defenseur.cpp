@@ -6,6 +6,7 @@
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
+#include "SurchargeOperator.h"
 #include "Defenseur.h"
 
 // #####################################################
@@ -107,4 +108,64 @@ Defenseur& Defenseur::operator=(Defenseur const &d2)
 	return *this;
 }
 
+void Defenseur::copy(Defenseur const &p2)
+{
+	this->setFiche(*p2.getFiche());
+	this->setFirstName(p2.getFirstName());
+	this->setName(p2.getName());
+	this->setNumero(p2.getNumero());
+}
+
+void Defenseur::deleteFiche()
+{
+	if (this->fiche != nullptr)
+	{
+		delete this->fiche;
+		this->fiche = nullptr;
+	}
+}
+
+bool Defenseur::equals(Fiche const& fiche) const
+{
+	return (*this->fiche == fiche);
+}
+
+Fiche* Defenseur::getFiche() const
+{
+	return this->fiche;
+}
+
+Defenseur& Defenseur::operator+=(Fiche& f2)
+{
+	*this->fiche += f2;
+	return *this;
+}
+
+// #####################################################
+// ############ Setters de la classe ###################
+// #####################################################
+
+void Defenseur::setFiche()
+{
+	this->deleteFiche();
+
+	Fiche* f = new Fiche();
+	this->fiche = f;
+}
+
+void Defenseur::setFiche(Fiche const& f)
+{
+	this->deleteFiche();
+
+	Fiche* f2 = new Fiche(f);
+	this->fiche = f2;
+}
+
+void Defenseur::setFiche(int PJ, int buts, int passes)
+{
+	this->deleteFiche();
+
+	Fiche fiche(PJ, buts, passes);
+	this->setFiche(fiche);
+}
 

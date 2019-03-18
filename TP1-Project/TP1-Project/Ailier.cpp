@@ -67,7 +67,7 @@ void Ailier::show(std::ostream& flux) const
 		this->fiche->show(flux);
 	}
 
-	flux << "\n\n Je joue a l'aile "<< this->position << "\n";
+	flux << "\n Je joue a l'aile "<< this->position << "\n";
 }
 
 

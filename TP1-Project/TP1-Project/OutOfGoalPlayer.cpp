@@ -8,7 +8,6 @@
  * Date: 26 fevrier 2019
 *===================================================================================================*/
 
-#include <iostream>
 #include "OutOfGoalPlayer.h"
 #include "SurchargeOperator.h"
 
@@ -56,6 +55,8 @@ void OutOfGoalPlayer::setFiche(Fiche const &fiche)
 
 void OutOfGoalPlayer::setFiche(int PJ, int buts, int passes)
 {
+	this->deleteFiche();
+
 	Fiche fiche(PJ, buts, passes);
 	this->setFiche(fiche);
 }

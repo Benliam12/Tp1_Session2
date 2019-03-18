@@ -8,6 +8,7 @@
 
 #pragma once
 #include "OutOfGoalPlayer.h"
+#include "Defenseur.h"
 
 class Avant : public Joueur
 {
@@ -19,12 +20,15 @@ public:
 	Avant & operator+=(Fiche &f2);
 
 	Avant();
+	Avant(Avant const &a);
 	Avant(std::string nom, std::string prenom, int numero);
 	virtual ~Avant();
-	
+
+	bool equals(Fiche const &fiche) const;
+
 	Fiche* getFiche() const;
 
-	void copy(OutOfGoalPlayer const &p2);
+	void copy(Avant const &p2);
 	void setFiche(Fiche const &f);
 	void setFiche(int PJ, int buts, int passes);
 	void setFiche();

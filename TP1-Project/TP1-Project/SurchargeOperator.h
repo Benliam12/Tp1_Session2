@@ -11,11 +11,12 @@
 #include "Joueur.h"
 #include "Defenseur.h"
 
-
 using std::ostream;
 
 ostream & operator <<(ostream &flux, Joueur&joueur);
 ostream & operator <<(ostream &flux, Fiche& fiche);
+
+bool operator ==(Fiche const& f1, Fiche const& f2);
 
 bool operator ==(Defenseur const &p1, Avant const &p2);
 bool operator ==(Avant const &p1, Defenseur const &p2);
@@ -27,7 +28,6 @@ bool operator !=(Avant const &p1, Defenseur const &p2);
 bool operator !=(Avant const &p1, Avant const &p2);
 bool operator !=(Defenseur const &p1, Defenseur const &p2);
 
-bool operator ==(Fiche const& f1, Fiche const& f2);
 
 // Aurait peut-être été une meilleure solution pour éviter de faire 8 operateurs de comparaison.
 //bool operator ==(OutOfGoalPlayer const &p1, OutOfGoalPlayer const &p2); 

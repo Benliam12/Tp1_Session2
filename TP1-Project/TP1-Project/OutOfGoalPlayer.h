@@ -2,7 +2,7 @@
  * Auteur: William D'Anjou
  * Laboratoire : TP1
  * Fichier: OutOfGoalPlayer.h
- * But: Classe abstraite servant a la non répétition des surchages d'opérateur. Sera hérité par Défenseur et Avant
+ * But: Classe servant a la non répétition des surchages d'opérateur. Sera hérité par Défenseur et Avant
  *      Contiendra également les méthodes communes entre ces 2 classes.
  *      Addition de cette classe afin de facilite et de rendre plus logique le développement du TP1.
  * Date: 26 fevrier 2019
@@ -18,6 +18,8 @@ protected:
 	Fiche* fiche = nullptr;
 	void deleteFiche();
 public:
+	bool equals(OutOfGoalPlayer const &p2) const;
+
 	void setFiche(Fiche const &f);
 	void setFiche(int PJ, int buts, int passes);
 	void setFiche();

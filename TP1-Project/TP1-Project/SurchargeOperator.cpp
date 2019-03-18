@@ -25,16 +25,43 @@ ostream & operator <<(ostream &flux, Fiche &fiche)
 	return flux;
 }
 
-bool operator==(Defenseur const& p1, Avant const &p2)
+bool operator ==(Fiche const& f1, Fiche const& f2)
+{
+	return f1.equals(f2);
+}
+
+bool operator ==(Defenseur const &p1, Avant const &p2)
+{
+	return p1.equals(*p2.getFiche());
+}
+bool operator ==(Avant const &p1, Defenseur const &p2)
+{
+	return p1.equals(*p2.getFiche());
+}
+bool operator ==(Avant const &p1, Avant const &p2)
+{
+	return p1.equals(*p2.getFiche());
+}
+bool operator ==(Defenseur const &p1, Defenseur const &p2)
 {
 	return p1.equals(*p2.getFiche());
 }
 
-
-
-bool operator==(Fiche const& f1, Fiche const& f2)
+bool operator !=(Defenseur const &p1, Avant const &p2)
 {
-	return f1.equals(f2);
+	return !(p1 == p2);
+}
+bool operator !=(Avant const &p1, Defenseur const &p2)
+{
+	return !(p1 == p2);
+}
+bool operator !=(Avant const &p1, Avant const &p2)
+{
+	return !(p1 == p2);
+}
+bool operator !=(Defenseur const &p1, Defenseur const &p2)
+{
+	return !(p1 == p2);
 }
 
 //bool operator ==(Defenseur const &d1, Defenseur const &d2)
