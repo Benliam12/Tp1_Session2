@@ -7,8 +7,8 @@
 *===================================================================================================*/
 
 #pragma once
-#include "OutOfGoalPlayer.h"
 #include "Defenseur.h"
+#include "Joueur.h"
 
 class Avant : public Joueur
 {

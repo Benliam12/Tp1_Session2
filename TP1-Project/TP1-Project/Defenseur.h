@@ -10,6 +10,7 @@
 
 //Inclusions
 #include "Fiche.h"
+#include "Joueur.h"
 
 class Defenseur : public Joueur
 {

@@ -2,7 +2,7 @@
  * Auteur: Nicolas Bittner-Deland & William D'Anjou
   * Laboratoire : TP1
   * Fichier: main.cpp
-  * But: //TODO: Ajouter un but concret
+  * But: Gerer l'affichage d'information de fiche et de joueurs
   * Date: 19 mars 2019
  *===================================================================================================*/
 
