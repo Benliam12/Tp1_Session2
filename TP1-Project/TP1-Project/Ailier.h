@@ -25,6 +25,6 @@ public:
 	Ailier(Ailier &a2, Fiche &f);
 	Ailier(Ailier &a2, int PJ, int but, int passes);
 	Ailier();
-	~Ailier();
+	virtual ~Ailier();
 };
 

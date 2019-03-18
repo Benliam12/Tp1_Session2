@@ -8,18 +8,18 @@
 
 #include "SurchargeOperator.h"
 
-void afficherJoueur(ostream &flux, Joueur &j)
+void afficherJoueur(ostream &flux, Joueur const &j)
 {
 	j.show(flux);
 }
 
-ostream & operator <<(ostream &flux, Joueur &joueur)
+ostream & operator <<(ostream &flux, Joueur const &joueur)
 {
 	joueur.show(flux);
 	return flux;
 }
 
-ostream & operator <<(ostream &flux, Fiche &fiche)
+ostream & operator <<(ostream &flux, Fiche const &fiche)
 {
 	fiche.show(flux);
 	return flux;

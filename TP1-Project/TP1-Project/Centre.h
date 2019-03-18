@@ -20,6 +20,6 @@ public:
 	Centre(std::string nom, std::string prenom, int numero);
 	Centre(Centre const &c);
 	Centre();
-	~Centre();
+	virtual ~Centre();
 };
 

@@ -8,13 +8,12 @@
 #pragma once
 
 #include "Avant.h"
-#include "Joueur.h"
 #include "Defenseur.h"
 
 using std::ostream;
 
-ostream & operator <<(ostream &flux, Joueur&joueur);
-ostream & operator <<(ostream &flux, Fiche& fiche);
+ostream & operator <<(ostream &flux, Joueur const &joueur);
+ostream & operator <<(ostream &flux, Fiche const &fiche);
 
 bool operator ==(Fiche const& f1, Fiche const& f2);
 

@@ -28,7 +28,7 @@ Defenseur::Defenseur(string nom, string prenom, int numero) : Joueur(nom, prenom
 	this->setFiche();
 }
 
-Defenseur::Defenseur(string nom, string prenom, int numero, Fiche fiche) : Joueur(nom, prenom, numero)
+Defenseur::Defenseur(string nom, string prenom, int numero, Fiche const &fiche) : Joueur(nom, prenom, numero)
 {
 	this->setFiche(fiche);
 }

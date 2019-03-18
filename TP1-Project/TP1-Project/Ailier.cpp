@@ -48,7 +48,7 @@ Ailier::Ailier(std::string nom, std::string prenom, int numero, std::string posi
 
 Ailier::~Ailier()
 {
-
+	this->deleteFiche();
 }
 
 // #####################################################

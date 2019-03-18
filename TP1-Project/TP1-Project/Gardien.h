@@ -21,5 +21,5 @@ public:
 
 	Gardien(string nom, string prenom, int numero);
 	Gardien();
-	~Gardien();
+	virtual ~Gardien();
 };

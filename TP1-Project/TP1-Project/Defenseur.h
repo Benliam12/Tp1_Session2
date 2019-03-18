@@ -26,7 +26,7 @@ public:
 	Defenseur();
 	Defenseur(Defenseur const &defenseur);
 	Defenseur(string nom, string prenom, int numero);
-	Defenseur(string nom, string prenom, int numero, Fiche fiche);
+	Defenseur(string nom, string prenom, int numero, Fiche const &fiche);
 	Defenseur(string nom, string prenom, int numero, int PJ, int buts, int passes);
 	virtual ~Defenseur();
 

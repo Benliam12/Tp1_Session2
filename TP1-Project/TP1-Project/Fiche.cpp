@@ -66,7 +66,7 @@ bool Fiche::equals(Fiche const& fiche) const
 		fiche.getNbPasse() == this->passes);
 }
 
-void Fiche::show(std::ostream& flux)
+void Fiche::show(std::ostream& flux) const
 {
 	flux << " PJ " << " B " << " P " << std::endl; // En-tete
 	flux << " " << this->PJ << " " << this->buts << " " << this->passes; // Score

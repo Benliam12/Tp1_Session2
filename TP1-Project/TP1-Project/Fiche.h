@@ -27,14 +27,14 @@ public:
 
 	bool equals(Fiche const &fiche) const;
 
-	void show(std::ostream &flux);
+	void show(std::ostream &flux) const;
 
 	Fiche & operator+=(Fiche const &f2);
 
 	Fiche(Fiche const &fiche);
 	Fiche(int PJ, int buts, int passes);
 	Fiche();
-	~Fiche();
+	virtual ~Fiche();
 };
 
 Fiche operator+(Fiche const &f1, Fiche const &f2);
