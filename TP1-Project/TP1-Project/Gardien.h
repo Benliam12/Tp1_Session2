@@ -1,3 +1,10 @@
+/*==================================================================================================
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
+ * Laboratoire: TP1
+ * Fichier: Defenseur.cpp
+ * But: La classe defenseurs contients les attributs d'un joueur gardien
+ * Date: 26 fevrier 2019
+*===================================================================================================*/
 #pragma once
 
 #include <string>

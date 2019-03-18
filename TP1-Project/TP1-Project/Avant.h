@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: Avant.h
  * But: Contient les informations d'un joueur qui joue a l'avant

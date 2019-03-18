@@ -123,7 +123,6 @@
     <ClCompile Include="Gardien.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OutOfGoalPlayer.cpp" />
     <ClCompile Include="SurchargeOperator.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -134,7 +133,6 @@
     <ClInclude Include="Fiche.h" />
     <ClInclude Include="Gardien.h" />
     <ClInclude Include="Joueur.h" />
-    <ClInclude Include="OutOfGoalPlayer.h" />
     <ClInclude Include="SurchargeOperator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

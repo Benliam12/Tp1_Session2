@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: Avant.cpp
  * But: Contient les informations d'un joueur qui joue a l'avant
@@ -31,10 +31,7 @@ Avant::Avant(std::string nom, std::string prenom, int numero) : Joueur(nom, pren
 // ########### Destructeur de la classe ################
 // #####################################################
 
-Avant::~Avant()
-{
-	
-}
+Avant::~Avant(){}
 
 // #####################################################
 // ############ Setters de la classe ###################
@@ -77,7 +74,6 @@ bool Avant::equals(Fiche const& fiche) const
 {
 	return (*this->fiche == fiche);
 }
-
 
 // #####################################################
 // ######## Methodes sans retour de la classe ##########

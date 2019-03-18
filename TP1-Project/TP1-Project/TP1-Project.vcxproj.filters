@@ -42,9 +42,6 @@
     <ClCompile Include="SurchargeOperator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OutOfGoalPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ailier.h">
@@ -69,9 +66,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SurchargeOperator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OutOfGoalPlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

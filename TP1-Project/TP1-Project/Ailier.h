@@ -1,3 +1,10 @@
+/*==================================================================================================
+ * Auteur: Nicolas Bitner-Deland & William D'Anjou
+ * Laboratoire : TP1
+ * Fichier: Ailier.cpp
+ * But: La classe defenseurs contients les attributs d'un joueur ailier
+ * Date: 26 fevrier 2019
+*===================================================================================================*/
 #pragma once
 #include "Avant.h"
 

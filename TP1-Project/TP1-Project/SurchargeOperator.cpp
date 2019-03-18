@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: SurchargeOperator.cpp
  * But: Contient les differentes definitions des surchages d'operateurs
@@ -15,7 +15,7 @@ void afficherJoueur(ostream &flux, Joueur &j)
 
 ostream & operator <<(ostream &flux, Joueur &joueur)
 {
-	afficherJoueur(flux, joueur);
+	joueur.show(flux);
 	return flux;
 }
 
@@ -30,47 +30,42 @@ bool operator ==(Fiche const& f1, Fiche const& f2)
 	return f1.equals(f2);
 }
 
+bool operator ==(Defenseur const &p1, Defenseur const &p2)
+{
+	return p1.equals(*p2.getFiche());
+}
+
 bool operator ==(Defenseur const &p1, Avant const &p2)
 {
 	return p1.equals(*p2.getFiche());
 }
+
 bool operator ==(Avant const &p1, Defenseur const &p2)
 {
 	return p1.equals(*p2.getFiche());
 }
+
 bool operator ==(Avant const &p1, Avant const &p2)
 {
 	return p1.equals(*p2.getFiche());
 }
-bool operator ==(Defenseur const &p1, Defenseur const &p2)
+
+bool operator !=(Defenseur const &p1, Defenseur const &p2)
 {
-	return p1.equals(*p2.getFiche());
+	return !(p1 == p2);
 }
 
 bool operator !=(Defenseur const &p1, Avant const &p2)
 {
 	return !(p1 == p2);
 }
+
 bool operator !=(Avant const &p1, Defenseur const &p2)
 {
 	return !(p1 == p2);
 }
+
 bool operator !=(Avant const &p1, Avant const &p2)
 {
 	return !(p1 == p2);
 }
-bool operator !=(Defenseur const &p1, Defenseur const &p2)
-{
-	return !(p1 == p2);
-}
-
-//bool operator ==(Defenseur const &d1, Defenseur const &d2)
-//{
-//
-//}
-//
-//bool operator !=(Defenseur const &d1, Defenseur const &d2)
-//{
-//	return !(d1 == d2);
-//}
-

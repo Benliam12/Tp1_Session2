@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: Fiche.cpp
  * But: La classe Fiche sert a contenir les informations sur un score qui sera attribue a un joueur

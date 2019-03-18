@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: Joueur.h
  * But: La classe joueur contients les differents attributs d'un joueur

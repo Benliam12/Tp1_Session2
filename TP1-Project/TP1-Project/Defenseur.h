@@ -1,5 +1,5 @@
 /*==================================================================================================
- * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
  * Laboratoire : TP1
  * Fichier: Defenseur.h
  * But: La classe defenseurs contients les attributs d'un joueur defenseur.
@@ -9,7 +9,6 @@
 #pragma once
 
 //Inclusions
-#include "Avant.h"
 #include "Fiche.h"
 
 class Defenseur : public Joueur

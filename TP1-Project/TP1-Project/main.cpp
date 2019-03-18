@@ -1,5 +1,5 @@
  /*==================================================================================================
-  * Auteur: William D'Anjou
+ * Auteur: Nicolas Bittner-Deland & William D'Anjou
   * Laboratoire : TP1
   * Fichier: main.cpp
   * But: //TODO: Ajouter un but concret
